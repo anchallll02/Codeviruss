@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, ShieldCheck,X, Instagram, Linkedin, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, ShieldCheck, Instagram, Linkedin, Facebook } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6"; 
-import logo from "../assets/Photos/logo2.png";
- 
+import logo from "../assets/Photos/logo.jpg"; 
+import logo2 from "../assets/Photos/logo2.png"; 
 const Footer = () => {
   const services = [
     { title: "IoT & Edge Security", slug: "iot-edge-security" },
@@ -27,47 +27,40 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 bg-white">
-      <div className="mx-auto px-6 py-8">
+    <footer className="bg-gray-50 border-t border-gray-200">
+      <div className="mx-auto px-6 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
           {/* Brand + Social */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <ShieldCheck className="text-[#0b2a5b]" size={28} />
-              <h3 className="text-xl font-bold text-[#0b2a5b]">
-                Codevirus Security
-              </h3>
-            </div>
-    
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Securing your digital assets with enterprise-grade cybersecurity solutions,
-              compliance services, and threat management.
+            {/* Logo */}
+            <img src={logo} alt="Codevirus Security Logo" className="w-32 h-auto mb-4" />
+
+            {/* Description */}
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              We help organizations strengthen their security posture through vulnerability assessments, penetration testing, and proactive risk management strategies.
             </p>
 
-            
             {/* Social Icons */}
             <div className="flex items-center gap-5 mt-6">
-            
               <a
                 href="https://x.com/codevirussec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#0b2a5b] transition duration-300" title="Twitter"
+                className="text-gray-500 hover:text-[#0b2a5b] transition duration-300"
+                title="X/Twitter"
               >
                 <FaXTwitter size={20} />
               </a>
-            
               <a
                 href="https://www.instagram.com/codevirussec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#0b2a5b] transition duration-300" 
+                className="text-gray-500 hover:text-[#0b2a5b] transition duration-300"
                 title="Instagram"
               >
                 <Instagram size={20} />
               </a>
-            
               <a
                 href="https://www.linkedin.com/company/codevirussecurity/"
                 target="_blank"
@@ -77,7 +70,6 @@ const Footer = () => {
               >
                 <Linkedin size={20} />
               </a>
-            
               <a
                 href="https://www.facebook.com/codevirussec9"
                 target="_blank"
@@ -87,13 +79,16 @@ const Footer = () => {
               >
                 <Facebook size={20} />
               </a>
-            
             </div>
-            <div className="flex items-center gap-5 mt-6">
-              <p className="text-sm text-gray-600 font-semibold mb-3">Recognized Partner</p>
+
+            {/* Recognized Partner */}
+            <div className="flex flex-col items-start gap-2 mt-6">
+              <p className="text-sm text-gray-600 font-semibold mb-1">Recognized Partner</p>
+              {/* Added original logo2 */}
+              <img src={logo2} alt="Original Partner Logo" className="w-32 h-auto mt-2" />
             </div>
-            <img src={logo} alt="" className="w-27 h-25 align-center" />
           </div>
+
           {/* Contact */}
           <div>
             <h4 className="text-sm font-semibold text-[#0b2a5b] mb-5 uppercase tracking-wide">
@@ -109,7 +104,6 @@ const Footer = () => {
                 <a href="mailto:services@codevirussec.in" className="hover:text-[#071a36] transition">
                   services@codevirussec.in
                 </a>
-                
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-[#0b2a5b]" />
@@ -166,15 +160,14 @@ const Footer = () => {
           </div>
 
         </div>
-
-        
       </div>
-      {/* Bottom */}
-        <div className="border-t border-gray-200 w-full bg-[#0f1f3d] mt-2 p-2">
-          <p className="text-sm text-white font-semibold text-center">
-            © {new Date().getFullYear()} Codevirus Security. All Rights Reserved.
-          </p>
-        </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-200 w-full bg-[#0f1f3d] mt-2 p-2">
+        <p className="text-sm text-white font-semibold text-center">
+          © {new Date().getFullYear()} Codevirus Security. All Rights Reserved.
+        </p>
+      </div>
     </footer>
   );
 };
