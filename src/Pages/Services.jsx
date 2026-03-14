@@ -403,20 +403,14 @@ const Services = () => {
       {!activeService && (
         <>
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-white via-[#f4f8fc] to-[#e6f0fa] pt-24 pb-20 px-6 border-b border-slate-200">
-            <div className="max-w-7xl mx-auto">
-              <span className="text-sm uppercase tracking-widest text-[#163d82] font-semibold">
-                Our Services
-              </span>
-
-              <h1 className="text-4xl lg:text-5xl font-extrabold mt-4 mb-5 leading-tight text-[#0b2a5b]">
-                Enterprise Cybersecurity <br />
-                <span className="text-[#163d82]">Services & Solutions</span>
+          <section className="bg-gradient-to-br from-white via-[#f4f8fc] to-[#e6f0fa] pt-24 pb-20 px-6 border-b border-slate-200 flex flex-col items-center text-center">
+           
+            <div className="max-w-4xl">
+              <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-[#0b2a5b]">
+                Additional Security Solutions
               </h1>
-
-              <p className="text-slate-700 text-base lg:text-lg leading-relaxed max-w-3xl">
-                We provide end-to-end cybersecurity services designed to defend,
-                detect, and respond to modern cyber threats.
+              <p className="text-lg lg:text-xl text-slate-700 leading-relaxed">
+                Specialized security solutions to address specific challenges and requirements of modern organizations. Beyond our core services, we offer tailored solutions to meet your unique security needs.
               </p>
             </div>
           </section>

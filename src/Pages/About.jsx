@@ -109,15 +109,6 @@ const About = () => {
       {/* FEATURES */}
       <section className="py-28 px-6 bg-[#f9fafc]">
         <div className="max-w-7xl mx-auto text-center">
-
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#0b2a5b] mb-6">
-            Our Key Services & Expertise
-          </h2>
-
-          <p className="text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed">
-            Our cybersecurity services cover enterprise security operations, threat monitoring, compliance management, risk analysis, and professional cybersecurity training designed to secure modern digital infrastructure.
-          </p>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((f, i) => (
               <div
